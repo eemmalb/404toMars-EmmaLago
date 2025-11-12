@@ -33,6 +33,59 @@ video {
     vertical-align: middle;
 }
 
+h1 {
+    font-size: clamp(20px, 4vw, 100px);
+    /* brillo base */
+  text-shadow:
+    0 0 1px var(--color-primario-opacidad),
+    0 0 5px var(--color-primario-opacidad),
+    0 0 10px var(--color-primario-opacidad),
+    0 0 20px var(--color-primario-opacidad);
+
+  /* animación de pulso */
+  animation: neon-pulse 1s ease-in-out infinite;
+}
+
+/* keyframes del brillo pulsante */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 1px var(--color-secundario),
+      0 0 5px var(--color-secundario),
+      0 0 10px var(--color-secundario),
+      0 0 20px var(--color-secundario);
+    opacity: 0.95;
+  }
+
+  50% {
+    text-shadow:
+      0 0 2px var(--color-primario),
+      0 0 10px var(--color-primario),
+      0 0 20px var(--color-primario),
+      0 0 40px var(--color-primario);
+    opacity: 1;
+    filter: blur(0.3px); /* micro desenfoque CRT */
+  }
+
+  /* pequeños micro pulsos */
+  40%, 60% {
+    opacity: 0.9;
+  }
+}
+
+
+
+
+h2 {
+    color: var(--color-secundario);
+    font-size: clamp(10px, 1.6vw, 32px);
+    margin: 0 14px 10px 14px;
+}
+
+.h2-box {
+    border-bottom: var(--color-secundario) solid 0.3px;
+    margin: 10px;
+}
 
 
 body {
@@ -102,11 +155,21 @@ header > div {
     gap: 3vw;
 }
 
+
+
+
+
+
+
 #columns {
     display: flex;
     margin-top: 7px;
-    gap: 7px;
+    justify-content: space-between;
 }
+
+
+
+
 
 #column-one {
     display: flex;
