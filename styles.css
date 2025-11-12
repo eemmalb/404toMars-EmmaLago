@@ -4,7 +4,7 @@
 :root {
     --font-primaria: "Share Tech Mono", monospace;
     --color-primario: #41b141;
-    --color-primario-opacidad: rgba(65, 177, 65, 0.5);
+    --color-primario-opacidad: rgba(64, 176, 64, 0.502);
     --color-secundario: #df2222;
     --background-color: #030a04;
     --borde-apartados: var(--color-primario-opacidad) solid 0.3px;
@@ -44,7 +44,7 @@ body {
 .wrapper {
     border: solid 1px;
     padding: 14px;
-    /* height: 100vh; */
+    height: 97vh;
 }
 
 /* Barras diagonales esquinas wrapper */
@@ -73,14 +73,14 @@ body {
 
 /* Abajo-derecha */
 .corner.bd{
-  bottom: 30px; right: 14px;
+  bottom: 27px; right: 15px;
   transform-origin: right center;
   transform: rotate(-45deg);
 }
 
 /* Abajo-izquierda */
 .corner.bi{
-  bottom: 30px; left: 14px;
+  bottom: 27px; left: 14px;
   transform-origin: left center;
   transform: rotate(45deg);
 }
@@ -102,12 +102,16 @@ header > div {
     gap: 3vw;
 }
 
+#columns {
+    display: flex;
+    margin-top: 7px;
+    gap: 7px;
+}
 
 #column-one {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    margin-top: 7px;
     /* border: var(--borde-apartados);
     padding: 7px; */
 }
@@ -133,5 +137,5 @@ header > div {
 }
 
 #column-one video {
-    height: 30vh;
+    height: 25vh;
 }
