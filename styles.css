@@ -25,6 +25,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--color-secundario);
+}
+
 /* con este selector y propiedades conseguimos que las imagenes se adapten al tamaño del elemento que las contiene y sean responsive */
 img,
 video {
@@ -33,59 +37,10 @@ video {
     vertical-align: middle;
 }
 
-h1 {
-    font-size: clamp(20px, 4vw, 100px);
-    /* brillo base */
-  text-shadow:
-    0 0 1px var(--color-primario-opacidad),
-    0 0 5px var(--color-primario-opacidad),
-    0 0 10px var(--color-primario-opacidad),
-    0 0 20px var(--color-primario-opacidad);
-
-  /* animación de pulso */
-  animation: neon-pulse 1s ease-in-out infinite;
-}
-
-/* keyframes del brillo pulsante */
-@keyframes neon-pulse {
-  0%, 100% {
-    text-shadow:
-      0 0 1px var(--color-secundario),
-      0 0 5px var(--color-secundario),
-      0 0 10px var(--color-secundario),
-      0 0 20px var(--color-secundario);
-    opacity: 0.95;
-  }
-
-  50% {
-    text-shadow:
-      0 0 2px var(--color-primario),
-      0 0 10px var(--color-primario),
-      0 0 20px var(--color-primario),
-      0 0 40px var(--color-primario);
-    opacity: 1;
-    filter: blur(0.3px); /* micro desenfoque CRT */
-  }
-
-  /* pequeños micro pulsos */
-  40%, 60% {
-    opacity: 0.9;
-  }
-}
 
 
 
 
-h2 {
-    color: var(--color-secundario);
-    font-size: clamp(10px, 1.6vw, 32px);
-    margin: 0 14px 10px 14px;
-}
-
-.h2-box {
-    border-bottom: var(--color-secundario) solid 0.3px;
-    margin: 10px;
-}
 
 
 body {
@@ -102,40 +57,40 @@ body {
 
 /* Barras diagonales esquinas wrapper */
 .corner{
-  position: absolute;
-  width: 23px;      
-  height: 1px;           
-  background: var(--color-primario);
-  will-change: transform;
-  transform: translateZ(0); 
+    position: absolute;
+    width: 23px;      
+    height: 1px;           
+    background: var(--color-primario);
+    will-change: transform;
+    transform: translateZ(0); 
 }
 
 /* Arriba-izquierda */
 .corner.ai{
-  top: 30px; left: 14px;
-  transform-origin: left center;
-  transform: rotate(-45deg);
+    top: 30px; left: 14px;
+    transform-origin: left center;
+    transform: rotate(-45deg);
 }
 
 /* Arriba-derecha */
 .corner.ad{
-  top: 30px; right: 14px;
-  transform-origin: right center;
-  transform: rotate(45deg);
+    top: 30px; right: 14px;
+    transform-origin: right center;
+    transform: rotate(45deg);
 }
 
 /* Abajo-derecha */
 .corner.bd{
-  bottom: 27px; right: 15px;
-  transform-origin: right center;
-  transform: rotate(-45deg);
+    bottom: 27px; right: 15px;
+    transform-origin: right center;
+    transform: rotate(-45deg);
 }
 
 /* Abajo-izquierda */
 .corner.bi{
-  bottom: 27px; left: 14px;
-  transform-origin: left center;
-  transform: rotate(45deg);
+    bottom: 27px; left: 14px;
+    transform-origin: left center;
+    transform: rotate(45deg);
 }
 
 
@@ -201,4 +156,130 @@ header > div {
 
 #column-one video {
     height: 25vh;
+}
+
+
+
+
+
+
+
+
+h2 {
+    color: var(--color-secundario);
+    font-size: clamp(10px, 1.6vw, 32px);
+    margin: 0 14px 10px 14px;
+}
+
+.h2-box {
+    border-bottom: var(--color-secundario) solid 0.3px;
+    margin: 10px;
+}
+
+h1:first-child {
+    font-size: clamp(20px, 3vw, 100px);
+}
+
+h1:last-child {
+    font-size: clamp(20px, 5vw, 100px);
+}
+
+h1 {
+    /* brillo base */
+    text-shadow:
+    0 0 1px var(--color-primario-opacidad),
+    0 0 5px var(--color-primario-opacidad),
+    0 0 10px var(--color-primario-opacidad),
+    0 0 20px var(--color-primario-opacidad);
+    
+    /* animación de pulso */
+  animation: neon-pulse 1s ease-in-out infinite;
+}
+
+/* keyframes del brillo pulsante */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 1px var(--color-secundario),
+      0 0 5px var(--color-secundario),
+      0 0 10px var(--color-secundario),
+      0 0 20px var(--color-secundario);
+    opacity: 0.95;
+  }
+
+  50% {
+    text-shadow:
+      0 0 2px var(--color-primario),
+      0 0 10px var(--color-primario),
+      0 0 20px var(--color-primario),
+      0 0 40px var(--color-primario);
+    opacity: 1;
+    filter: blur(0.3px); /* micro desenfoque CRT */
+  }
+
+  /* pequeños micro pulsos */
+  40%, 60% {
+    opacity: 0.9;
+  }
+}
+
+
+.error-404 {
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+.lista-errores {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--color-secundario) solid 0.3px;
+}
+
+.lista-errores div:last-child {
+    margin-bottom: 10px;
+}
+
+#column-two .recommended-actions {
+    margin: 14px 0 14px 0;
+}
+
+h3 {
+    font-size: clamp(20px, 2vw, 100px);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 14px 0;
+}
+
+
+
+
+/* MARQUEE */
+.marquee {
+    margin: 12px 0;
+    overflow: clip;
+    border: var(--borde-apartados);
+    height: 5vh;
+}
+
+.group {
+    display: flex;
+    padding-left: 4.8rem;
+    gap: 3.8rem;
+    width: max-content;
+    padding: 10px;
+}
+
+/* rtl = right to left */
+.group.rtl {
+    animation: marquee-move-text 11s linear infinite forwards;
+}
+
+/* DEFINICIÓN DE LA ANIMACIÓN */
+@keyframes marquee-move-text {
+    to {
+        transform: translateX(-50%);
+    }
 }

@@ -6,7 +6,7 @@
             
             <!-- CARGAMOS ARCHIVO EXTERNO DE CSS -->
             <link href="styles.css" rel="stylesheet" type="text/css">
-            <link href="#" rel="icon" type="image/png">
+            <link href="media/img/flavicon.png" rel="icon" type="image/png">
             <!--ICONOS DE FONT AWESOME-->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
@@ -50,7 +50,7 @@
                                 <p>SYSTEM ERROR 404</p>
                                 <p>SYSTEM ERROR 404</p>
                             </div>
-                            <p>HINT: GO TO HOMEPAGE</p>
+                            <a href="#">HINT: GO TO HOMEPAGE</a>
                         </div>
     
                         <div id="tel-check">
@@ -111,10 +111,43 @@
                             <div class="h2-box">
                                 <h2>&lt;&lt;&lt; CRITICAL FAILURE DETECTED</h2>
                             </div>
+
                             <div class="error-404">
                                 <h1>SYSTEM ERROR:</h1>
                                 <h1>404</h1>
                             </div>
+
+                            <div class="lista-errores">
+                                <div>
+                                    <p>ROUTE FILE NOT FOUND</p>
+                                    <p>COORDINATES NOT FOUND</p>
+                                    <p>DESTINATION: UNKNOWN</p>
+                                    <p>DATA LINK FAILURE</p>
+                                    <p>SIGNAL LOST... ATTEMPTING RECONNECT</p>
+                                </div>
+                                <div>
+                                    <p>SYSTEM ERROR</p>
+                                    <p>SYSTEM ERROR</p>
+                                    <p>SYSTEM ERROR</p>
+                                    <p>TIMEOUT</p>
+                                </div>
+                            </div>
+
+                            <div class="recommended-actions">
+                                <h3>&gt; RECOMMENDED ACTIONS:</h3>
+                                <div class="options">
+                                    <!-- si esta fuera la pagina de error de verdad de una pagina, estos serían botones que llevarian a la pagina de inicio -->
+                                    <a class="button" href="#">[1] RETURN TO BASE (HOMEPAGE)</a>
+                                    <a class="button" href="#">[2] REROUTE TO ORBIT (REFRESH PAGE)</a>
+                                    <a class="button" href="#">[3] PANIC (NOT RECOMMENDED)</a>
+                                </div>
+                                <p>&gt; EXECUTE 1 — RETURN TO BASE</p>
+                            </div>
+
+                            <div class="space-values">
+
+                            </div>
+
                         </div>
                     </div>
     
@@ -122,14 +155,26 @@
 
                 </div>
 
-                <header>
-                    <div>
-                        <p>NAV CONTROL v3.2</p>
-                        <p>VESSEL: UDIT-404</p>
-                        <p>MARS WEEK OPS</p>
+                <section id="marquee">
+                    <div class="marquee">
+                        <div class="group rtl">
+                            <p>PLEASE RETURN TO HOMEPAGE</p>
+                            <p>VEUILLEZ REVENIR À LA PAGE D'ACCUEIL</p>
+                            <p>POR FAVOR, VUELVA A LA PÁGINA PRINCIPAL</p>
+                            <p>BITTE KEHREN SIE ZUR STARTSEITE ZURÜCK</p>
+                            <p>TORNA ALLA PAGINA INIZIALE</p>
+                            <p>ПРОСЬБА ВЕРНУТЬСЯ НА ГЛАВНУЮ СТРАНИЦУ</p>
+                            <p>请返回主页</p>
+                            <p aria-hidden="true">PLEASE RETURN TO HOMEPAGE</p>
+                            <p aria-hidden="true">VEUILLEZ REVENIR À LA PAGE D'ACCUEIL</p>
+                            <p aria-hidden="true">POR FAVOR, VUELVA A LA PÁGINA PRINCIPAL</p>
+                            <p aria-hidden="true">BITTE KEHREN SIE ZUR STARTSEITE ZURÜCK</p>
+                            <p aria-hidden="true">TORNA ALLA PAGINA INIZIALE</p>
+                            <p aria-hidden="true">ПРОСЬБА ВЕРНУТЬСЯ НА ГЛАВНУЮ СТРАНИЦУ</p>
+                            <p aria-hidden="true">请返回主页</p>
+                        </div>
                     </div>
-                    <p>SECTOR: E-404</p>
-                </header>
+                </section>
 
             </div>
         </body>
