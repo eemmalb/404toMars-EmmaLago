@@ -314,6 +314,7 @@ h3 {
 
 .column2-radar {
     flex: 2;
+    margin-bottom: 10px;
 }
 
 .column1-radar video {
