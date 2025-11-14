@@ -49,20 +49,22 @@ function pick(values) {
 
 // PARA QUE EL RELOJ DE LA CÁMARA MARQUE LA HORA REAL
 function initLiveClock() {
-    const liveTimeEl = document.getElementById('live-time');
-    if (!liveTimeEl) {
+    const liveTimeEls = document.querySelectorAll('[data-live-time]');
+    if (!liveTimeEls.length) {
         return;
     }
 
     const pad = value => value.toString().padStart(2, '0');
     const updateClock = () => {
         const now = new Date();
-        liveTimeEl.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+        const time = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+        liveTimeEls.forEach(el => {
+            el.textContent = time;
+        });
     };
 
     updateClock();
     setInterval(updateClock, 1000);
 }
-
 
 
