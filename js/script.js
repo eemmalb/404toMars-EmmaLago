@@ -1,4 +1,8 @@
+
+// PARA HACER QUE LOS NÚMEROS DE SPACE VALUES CAMBIEN, COMO UN GLITCH
 document.addEventListener('DOMContentLoaded', () => {
+    initLiveClock();
+
     const configs = {
         ox: { label: 'OX', value: () => `${randomInt(65, 98)}%` },
         fuel: { label: 'FUEL', value: () => `${randomInt(10, 95)}%` },
@@ -39,4 +43,23 @@ function randomInt(min, max) {
 
 function pick(values) {
     return values[Math.floor(Math.random() * values.length)];
+}
+
+
+
+// PARA QUE EL RELOJ DE LA CÁMARA MARQUE LA HORA REAL
+function initLiveClock() {
+    const liveTimeEl = document.getElementById('live-time');
+    if (!liveTimeEl) {
+        return;
+    }
+
+    const pad = value => value.toString().padStart(2, '0');
+    const updateClock = () => {
+        const now = new Date();
+        liveTimeEl.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+    };
+
+    updateClock();
+    setInterval(updateClock, 1000);
 }

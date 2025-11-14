@@ -121,19 +121,20 @@ header > div {
     justify-content: space-between;
 }
 
+#column-one,
+#column-two,
+#column-three {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border: var(--borde-apartados);
+    padding: 7px;
+}
 
 
 
 /**
 /* PRIMERA COLUMNA  */
-#column-one {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    /* border: var(--borde-apartados);
-    padding: 7px; */
-}
-
 .booting,
 #tel-check {
     border: var(--borde-apartados);
@@ -162,6 +163,10 @@ header > div {
 
 /**
 /* SEGUNDA COLUMNA  */
+#column-two {
+    width: 40vw;
+}
+
 h2 {
     color: var(--color-secundario);
     font-size: clamp(10px, 1.6vw, 32px);
@@ -251,17 +256,11 @@ h3 {
     margin: 14px 0 14px 0;
 }
 
-/* VIDEO GREEN SMOKE */
-.green-smoke {
-    height: 10vh;
-}
-
 /* SPACE VALUES  */
 .space-values {
     display: flex;
     justify-content: space-between;
     border: var(--borde-apartados);
-    margin-top: 14px;
     padding: 7px;
 }
 
@@ -277,42 +276,83 @@ h3 {
 
 
 
+/**
+/* TERCERA COLUMNA  */
+.camera-ext {
+    border: var(--borde-apartados);
+    padding: 7px;
+}
 
+.camera-ext > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+}
 
+.camera-ext #video-ext {
+    width: 27vw;
+    border: var(--borde-apartados);
+    margin-bottom: 14px;
+}
 
+/* sección radar */
+#radar {
+    border: var(--borde-apartados);
+    padding: 7px;
+}
 
+.radar {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 7px;
+}
 
+.column1-radar,
+.column2-radar {
+    flex: 1;
+}
 
+.column2-radar {
+    flex: 2;
+}
+
+.column1-radar video {
+    margin-bottom: 14px;
+}
 
 
 
 
 
 /**
-/* MARQUEE */
-.marquee {
-    margin: 12px 0;
-    overflow: clip;
-    border: var(--borde-apartados);
-    height: 5vh;
-}
-
-.group {
-    display: flex;
-    padding-left: 4.8rem;
-    gap: 3.8rem;
-    width: max-content;
-    padding: 10px;
-}
-
-/* rtl = right to left */
-.group.rtl {
-    animation: marquee-move-text 11s linear infinite forwards;
-}
-
-/* DEFINICIÓN DE LA ANIMACIÓN */
-@keyframes marquee-move-text {
-    to {
-        transform: translateX(-50%);
+    /* MARQUEE */
+    .marquee {
+        margin: 7px 0;
+        overflow: clip;
+        border: var(--borde-apartados);
+        height: 3vh;
     }
-}
+    
+    .group {
+        display: flex;
+        padding-left: 4.8rem;
+        gap: 2.8rem;
+        width: max-content;
+        padding: 7px;
+    }
+
+    .group.rtl p {
+        font-size: 0.7rem;
+    }
+    
+    /* rtl = right to left */
+    .group.rtl {
+        animation: marquee-move-text 14s linear infinite forwards;
+    }
+    
+    /* DEFINICIÓN DE LA ANIMACIÓN */
+    @keyframes marquee-move-text {
+        to {
+            transform: translateX(-50%);
+        }
+    }
