@@ -272,6 +272,9 @@ h3 {
     margin-top: 12px;
 }
 
+#column-two .camera-ext {
+    display: none;
+}
 
 
 
@@ -289,7 +292,7 @@ h3 {
     margin-top: 7px;
 }
 
-.camera-ext #video-ext {
+.camera-ext .video-ext {
     width: 27vw;
     border: var(--borde-apartados);
     margin-bottom: 14px;
@@ -357,3 +360,39 @@ h3 {
             transform: translateX(-50%);
         }
     }
+
+
+
+
+    @media (max-width: 470px) {
+    #column-one,
+    #column-three {
+        display: none;
+    }
+
+    #column-two {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+    #columns {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .error-404 h1 {
+        font-size: clamp(20px, 10vw, 150px);
+    }
+
+    #column-two .camera-ext {
+        display: block;
+    }
+
+    .camera-ext .video-ext {
+        width: 70vw;
+        margin: 14px auto;
+    }
+
+    #marquee {
+        display: none;
+    }
+}
